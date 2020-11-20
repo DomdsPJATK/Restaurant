@@ -1,10 +1,12 @@
 import React from 'react';
-import { HeaderContainer, HomeButton } from './styles/Header';
+import Navbar from '../Navbar/Navbar';
+import { HeaderContainer, Logo } from './styles/Header';
 
 const Header = () => {
     return (
         <HeaderContainer>
-            <HomeButton src="https://www.iconsdb.com/icons/preview/white/home-7-xxl.png" />
+            <Logo src="http://www.magdagessler.pl/Obrazki/logo.png" />
+            <Navbar></Navbar>
         </HeaderContainer>
     );
 }

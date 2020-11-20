@@ -1,28 +1,67 @@
-import React from 'react';
-import { Container, SeatsContainer, Seat, Wrapper, DisinfectionButton, DetailsButton } from './styles/TableCard';
+import React, { useState } from 'react';
+import { Container, SeatsContainer, Seat, Wrapper, DisinfectionButton, Button, EditButton, ButtonsRowWrapper } from './styles/TableCard';
+import { useHistory } from "react-router-dom";
 
 
-export default function TableCard({ children, ...restProps }) {
+export default function TableCard(props) {
+    const [tableId, setTableId] = useState(2);
+    const [isDisinfected, setIsDisinfected] = useState(false);
+    const [numberOfSeats, setNumberOfSeats] = useState(8);
+
+    let history = useHistory();
+
+    function handleClick() {
+        history.push("/details", { id: tableId });
+    }
+
+    function toggleIsDisinfected() {
+        setIsDisinfected(!isDisinfected);
+    }
+
+    function getStatusOfDisinfection() {
+        if (isDisinfected === true) return <>Zdezynfekowany</>;
+        return <>Niezdezynfekowany</>;
+    }
+
+    function renderSeats() {
+        let items = [];
+
+        for (let i = 0; i < numberOfSeats; i++) {
+            items.push(<TableCard.Seat />);
+        }
+
+        return items;
+    }
+
+    function modifyTable() {
+        history.push("/tableForm", {
+            details: {
+                tableId: tableId,
+                isDisinfected: isDisinfected,
+                numberOfSeats: numberOfSeats
+            }
+        });
+    }
+
     return (
         <TableCard.Wrapper>
             <TableCard.Container>
-                1
-                <DisinfectionButton isDisinfected>Zdezynfekowany</DisinfectionButton>
-                <DetailsButton>Rezerwacje</DetailsButton>
+                {tableId}
+                <ButtonsRowWrapper>
+                    <DisinfectionButton isDisinfected={isDisinfected} onClick={() => toggleIsDisinfected()}>{getStatusOfDisinfection()}</DisinfectionButton>
+                    <EditButton type="delete">X</EditButton>
+                </ButtonsRowWrapper>
+                <Button onClick={() => modifyTable()}> Modyfikuj</Button>
+                <Button onClick={() => handleClick()}> Rezerwacje</Button>
             </TableCard.Container>
             <TableCard.SeatsContainer>
-                <TableCard.Seat />
-                <TableCard.Seat />
-                <TableCard.Seat />
-                <TableCard.Seat />
-                <TableCard.Seat />
-                <TableCard.Seat />
-                <TableCard.Seat />
-                <TableCard.Seat />
+                {renderSeats()}
             </TableCard.SeatsContainer>
         </TableCard.Wrapper>
     );
+
 }
+
 
 TableCard.Wrapper = function TableWrapper({ children }) {
     return (
@@ -30,9 +69,9 @@ TableCard.Wrapper = function TableWrapper({ children }) {
     );
 }
 
-TableCard.Container = function TableContainer({ children }) {
+TableCard.Container = function TableContainer({ children, ...restProps }) {
     return (
-        <Container>{children}</Container>
+        <Container {...restProps}>{children}</Container>
     );
 }
 
@@ -45,17 +84,5 @@ TableCard.SeatsContainer = function TableSeatsContainer({ children }) {
 TableCard.Seat = function TableSeat({ children }) {
     return (
         <Seat>{children}</Seat>
-    );
-}
-
-TableCard.DisinfectionButton = function Button({ children }) {
-    return (
-        <DisinfectionButton>{children}</DisinfectionButton>
-    );
-}
-
-TableCard.DetailsButton = function Details({ children }) {
-    return (
-        <DetailsButton>{children}</DetailsButton>
     );
 }

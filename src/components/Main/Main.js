@@ -1,11 +1,21 @@
 import React from 'react';
-import { MainContainer } from './styles/Main';
+import { useHistory } from 'react-router-dom';
+import { BackButton, MainContainer } from './styles/Main';
 
 const Main = ({ children }) => {
+
+    const history = useHistory();
+
+    function handleClick() {
+        history.goBack();
+    }
+
     return (
-        <MainContainer>
-            {children}
-        </MainContainer>
+        <>
+            <MainContainer>
+                {children}
+            </MainContainer>
+        </>
     );
 }
 

@@ -5,11 +5,10 @@ import { HomeContainer } from './styles/Home';
 const Home = () => {
     return (
         <HomeContainer>
-            <TableCard></TableCard>
-            <TableCard></TableCard>
-            <TableCard></TableCard>
-            <TableCard></TableCard>
-            <TableCard></TableCard>
+            <TableCard ></TableCard>
+            <TableCard ></TableCard>
+            <TableCard ></TableCard>
+            <TableCard ></TableCard>
         </HomeContainer>
     );
 }

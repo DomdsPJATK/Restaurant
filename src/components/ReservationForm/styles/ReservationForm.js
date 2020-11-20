@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 
 export const Wrapper = styled.div`
     display: flex;
@@ -37,38 +37,11 @@ export const CounterValue = styled.div`
 
 export const Form = styled.form`
     width: 100%;
+
+    & > * {
+        margin-top: 10px;
+    }
 `;
 
-export const Input = styled.input`
-    width: 100%;
-    background-color: grey;
-    height: 50px;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    ${props => props.type === 'datetime-local' && css`
-        padding: 20px;
-
-        &:focus, &:active {
-            border: none;
-            background-color: orange;
-            outline: none;
-        }
-    `}
-
-    ${props => props.type === 'button' && css`
-        &:hover {
-            background-color: orange;
-        }
-
-        &:focus, &:active {
-            border: none;
-            background-color: orange;
-            outline: none;
-        }
-    `}
-`;
 
 

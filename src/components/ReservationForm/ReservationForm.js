@@ -1,16 +1,24 @@
 import React from 'react';
-import { CounterTitle, CounterValue, Wrapper, CounterContainer, Form, Input } from './styles/ReservationForm';
+import { CounterTitle, CounterValue, Wrapper, CounterContainer, Form } from './styles/ReservationForm';
+import Input from '../Input/Input';
+import { useHistory } from 'react-router-dom';
 
-export default function ReservationForm() {
+export default function ReservationForm({ id }) {
+    let history = useHistory();
+
+    function handleClick() {
+        history.push("/details", { id });
+    }
+
     return (
         <ReservationForm.Wrapper>
             <ReservationForm.CounterContainer>
-                <ReservationForm.CounterTitle>Wolnych siedzeń: </ReservationForm.CounterTitle>
-                <ReservationForm.CounterValue>3</ReservationForm.CounterValue>
+                <ReservationForm.CounterTitle>Numer stolika: </ReservationForm.CounterTitle>
+                <ReservationForm.CounterValue>{id}</ReservationForm.CounterValue>
             </ReservationForm.CounterContainer>
             <Form>
                 <Input type="datetime-local"></Input>
-                <Input type="button" value="Rezerwuj"></Input>
+                <Input type="button" value="Rezerwuj" onClick={() => handleClick()}></Input>
             </Form>
         </ReservationForm.Wrapper>
     );

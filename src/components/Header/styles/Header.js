@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
     height: 50px;
-    width: 100vw;
+    max-width: 100%;
     background-color: grey;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
 `;
 
-export const HomeButton = styled.img`
-    height: 70%;
+export const Logo = styled.img`
+    height: 35px;
 `;
