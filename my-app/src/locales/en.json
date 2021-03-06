@@ -1,0 +1,73 @@
+{
+    "table": {
+        "sterilizedTrue": "Disinfected",
+        "sterilizedFalse": "Undisinfected",
+        "true": "Yes",
+        "false": "No",
+        "seats": "Seats",
+        "tableNumber": "Table number"
+    },
+    "client": {
+        "name": "Name",
+        "surname": "Surname",
+        "phoneNumber": "Phone number"
+    },
+    "reservation": {
+        "date": "Date",
+        "dateSentence": "Date of reservation:",
+        "timeSentence": "at:",
+        "bar": "Reservations for table:"
+    },
+    "functions": {
+        "edit": "Edit",
+        "details": "Details",
+        "confirm": "Confirm"
+    },
+    "details": {
+        "header": {
+            "client": "Client details",
+            "table": "Table details",
+            "formClient": "Add/Modify client",
+            "formReservation": "Add/Modify reservation",
+            "formTable": "Add/Modify table",
+            "chooseClient": "Choose client"
+        },
+        "reservations": {
+            "client": "Client reservations",
+            "table": "Table reservations"
+        }
+    },
+    "nav": {
+        "home": "Home",
+        "clients": "Client list",
+        "reservations": "Reservations list",
+        "addReservation": "New reservation",
+        "addClient": "New client",
+        "addTable": "New table"
+    },
+    "errors": {
+        "required": "Field is required",
+        "phoneValidation": "Format of field should be XXXXXXXXX e.g. 666333222",
+        "len_3_20": "Field should be 3 to 20 characters long",
+        "min_1": "Minimal number of seats is 1",
+        "max_10": "Maximum number of seats is 10",
+        "patternName": "Field name should be a letter",
+        "patternSurname": "Field surname should be a letter",
+        "dateValidation": "Field date should be later or is empty",
+        "dateIsAfter": "Please enter a later date",
+        "lenName_3_20": "Field name should be 3 to 20 characters long",
+        "lenSurname_3_20": "Field surname should be 3 to 20 characters long",
+        "default": "Wrong data in field",
+        "isNumberTableNumber": "Field table number should be a digit",
+        "isNumberTableSeats": "Field seats should be a digit",
+        "requiredPhoneNumber": "Field phone number is required",
+        "requiredName": "Field name is required",
+        "requiredSurname": "Field surname is required",
+        "requiredDate": "Field date is required",
+        "requiredSeats": "Field seats is required",
+        "requiredClient": "There is no such client. Add new client",
+        "requiredTable": "There is no such table. Add new table",
+        "requiredTableNumber": "Field table number is required",
+        "requiredSterilization": "Field disinficted is required"
+    }
+}

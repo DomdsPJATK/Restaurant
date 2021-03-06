@@ -1,0 +1,73 @@
+{
+    "table": {
+        "sterilizedTrue": "Zdezynfekowany",
+        "sterilizedFalse": "Niezdezynfekowany",
+        "true": "Tak",
+        "false": "Nie",
+        "seats": "Liczba miejsc",
+        "tableNumber": "Numer stolika"
+    },
+    "client": {
+        "name": "Imię",
+        "surname": "Nazwisko",
+        "phoneNumber": "Numer telefonu"
+    },
+    "reservation": {
+        "date": "Data i godzina",
+        "dateSentence": "Rezerwacja dnia:",
+        "timeSentence": "o godzinie:",
+        "bar": "Rezerwacje stolika numer:"
+    },
+    "functions": {
+        "edit": "Modyfikuj",
+        "details": "Szczegóły",
+        "confirm": "Wyślij"
+    },
+    "details": {
+        "header": {
+            "client": "Szczegóły klienta",
+            "table": "Szczegóły stolika",
+            "formClient": "Dodaj/Modyfikuj klienta",
+            "formReservation": "Dodaj/Modyfikuj rezerwację",
+            "formTable": "Dodaj/Modfikuj stolik",
+            "chooseClient": "Wybierz klienta"
+        },
+        "reservations": {
+            "client": "Rezerwacje klienta",
+            "table": "Rezerwacje stolika"
+        }
+    },
+    "nav": {
+        "home": "Strona główna",
+        "clients": "Lista klientów",
+        "reservations": "Lista rezerwacji",
+        "addReservation": "Dodaj rezerwację",
+        "addClient": "Dodaj klienta",
+        "addTable": "Dodaj stolik"
+    },
+    "errors": {
+        "required": "Pole jest wymagane",
+        "phoneValidation": "Pole powinno mieć format XXXXXXXXX np. 666333222",
+        "dateValidation": "Pole data zawiera nieprawidłową wartość. Data jest przestarzała lub zajęta",
+        "dateIsAfter": "Wprowadź późniejszą datę",
+        "len_3_20": "Pole powinno zawierać od 3 do 20 znaków",
+        "lenName_3_20": "Pole imię powinno zawierać od 3 do 20 znaków",
+        "lenSurname_3_20": "Pole nazwisko powinno zawierać od 3 do 20 znaków",
+        "min_1": "Minimalna liczba miejsc to 1",
+        "max_10": "Maksymalna liczba miejsc to 10",
+        "patternName": "Pole imię musi być literami",
+        "patternSurname": "Pole nazwisko musi być literami",
+        "default": "Wystąpiły niepoprawne dane",
+        "isNumberTableNumber": "Pole numer stolika powinno być liczbą",
+        "isNumberTableSeats": "Pole liczba miejsc powinno być liczbą",
+        "requiredPhoneNumber": "Pole numer telefonu jest wymagane",
+        "requiredName": "Pole imię jest wymagane",
+        "requiredSurname": "Pole nazwisko jest wymagane",
+        "requiredDate": "Pole data jest wymagane",
+        "requiredSeats": "Pole liczba miejsc jest wymagane",
+        "requiredClient": "Taki klient nie istnieje. Dodaj nowego.",
+        "requiredTable": "Taki stolik nie istnieje. Dodaj nowy.",
+        "requiredTableNumber": "Pole numer stolika jest wymagane",
+        "requiredSterilization": "Pole sterylizacji jest wymagane"
+    }
+}

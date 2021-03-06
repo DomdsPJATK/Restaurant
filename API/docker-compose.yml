@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    container_name: dev_mysql
+    ports:
+      - "3306:3306"
+    environment:
+      TZ: "Poland"
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: default_schema
+    volumes:
+      - "mysqldata:/var/lib/mysql"
+volumes:
+  mysqldata:
